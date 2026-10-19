@@ -4,7 +4,7 @@ description: Adds motion and effects that earn their cost under a strict CSP - t
 license: MIT
 metadata:
   author: hyz-is
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # HYZIS UI motion

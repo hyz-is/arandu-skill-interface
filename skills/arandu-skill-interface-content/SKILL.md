@@ -4,7 +4,7 @@ description: Use when interface text must be written, rewritten or made consiste
 license: MIT
 metadata:
   author: hyz-is
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # HYZIS content

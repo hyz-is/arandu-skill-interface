@@ -15,7 +15,8 @@ A preset is a measured, named starting point for `DESIGN.md`. It is never refere
 1. A brand rule in `PRODUCT.md` (colour lock, font, logo) beats every preset value it touches.
 2. A preset the user names is applied as named.
 3. URLs or images from the user → `from-references.md`.
-4. Nothing → `arandu`.
+4. "Arandu design", "design Arandu", "padrão Arandu" or "Arandu pattern" → `arandu`, applied automatically (see the direction skill, step 4).
+5. Nothing named → ask once, with `arandu` first and recommended; if the run cannot ask, apply `arandu` and record it.
 
 ## File format (every preset follows it)
 

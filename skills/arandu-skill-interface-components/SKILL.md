@@ -4,7 +4,7 @@ description: Use when building or fixing any screen, page, form, table, list, da
 license: MIT
 metadata:
   author: hyz-is
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # HYZIS UI components

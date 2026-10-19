@@ -4,7 +4,7 @@ description: Writes and edits the persuasive pages of a Kyse product, bound to i
 license: MIT
 metadata:
   author: hyz-is
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # HYZIS copywriting

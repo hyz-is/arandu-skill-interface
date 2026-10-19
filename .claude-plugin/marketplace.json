@@ -9,7 +9,7 @@
     {
       "name": "arandu-skill-interface",
       "description": "Direction, components, motion, content, copywriting, SEO/GEO and an anti-AI audit for Kyse and Ayra products, sequenced by an orchestrator.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./",
       "strict": false,
       "license": "MIT",

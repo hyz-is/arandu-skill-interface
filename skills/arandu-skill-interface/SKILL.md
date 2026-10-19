@@ -1,10 +1,10 @@
 ---
 name: arandu-skill-interface
-description: Orchestrates HYZIS interface work end to end for products built on Kyse (Go + HTMX + Basecoat) and Ayra (native Go/Gio). It sequences discovery, visual direction, content, components, motion, SEO/GEO and the final anti-AI audit, and keeps PRODUCT.md, DESIGN.md and the content glossary as the shared state. Use when the request spans more than one of those areas - "make this interface premium", "refine the product", "build the pages of X", "redesign the dashboard", "make it look designed by a senior team", "harmonise the app", "the whole product looks generic", or a new product's first screens. Not for a single focused task that one specialist arandu-skill-interface-* skill already covers (a button label, a sitemap, one animation, an audit only); route those to that skill.
+description: Orchestrates HYZIS interface work end to end for products built on Kyse (Go + HTMX + Basecoat) and Ayra (native Go/Gio). It sequences discovery, visual direction, content, components, motion, SEO/GEO and the final anti-AI audit, and keeps PRODUCT.md, DESIGN.md and the content glossary as the shared state. Use when the request spans more than one of those areas - "make this interface premium", "refine the product", "build the pages of X", "redesign the dashboard", "make it look designed by a senior team", "harmonise the app", "the whole product looks generic", "Arandu design" / "padrão Arandu" for a whole product, or a new product's first screens. Not for a single focused task that one specialist arandu-skill-interface-* skill already covers (a button label, a sitemap, one animation, an audit only); route those to that skill.
 license: MIT
 metadata:
   author: hyz-is
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # HYZIS interface
@@ -37,6 +37,8 @@ The family: `arandu-skill-interface-direction` (presets, PRODUCT.md, DESIGN.md, 
 2. **Classify the job** with [references/job-types.md](references/job-types.md): new world, extend, refine, redesign. Say it in one line with the evidence.
 3. **Plan the run** with [references/flow.md](references/flow.md): which steps apply, which surfaces, what each step must hand to the next. Write the plan at the top of the run log ([references/run-log.md](references/run-log.md)).
 4. **Discovery**: run `arandu-skill-interface-direction` (product truth, preset or references, DESIGN.md) and `arandu-skill-interface-content` (niche profile, voice, glossary, realistic data). Ask the user only what the repository cannot answer, in one combined round.
+   - **Design choice.** If neither the request nor `PRODUCT.md`/`DESIGN.md` names the design, put this question first in that round, with the Arandu pattern as the recommended option: "Which design? (1) Arandu pattern — the look of the Arandu ecosystem apps (recommended); (2) dark-neon-fintech; (3) dark-gold-api; (4) enterprise-security; (5) your own references (URLs or images)." Record the answer in `PRODUCT.md`.
+   - **Arandu pattern selected** — the user says "Arandu design", "design Arandu", "padrão Arandu", "Arandu pattern" or picks (1): apply the preset automatically through `arandu-skill-interface-direction` (tokens, fonts, page head, app shell, DESIGN.md). Do not ask further visual questions; ask only for the accent when the project has none of its own.
 5. **Build**: `arandu-skill-interface-components` on each surface, with DESIGN.md, the glossary and the realistic data.
 6. **Words**: `arandu-skill-interface-content` (inventory, rewrite, apply) on product surfaces; `arandu-skill-interface-copywriting` on persuasive surfaces.
 7. **Motion**: `arandu-skill-interface-motion`, within the budget for each surface's visitor mode.

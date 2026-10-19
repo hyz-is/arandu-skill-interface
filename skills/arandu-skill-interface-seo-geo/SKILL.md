@@ -4,7 +4,7 @@ description: Use when public pages must be found, indexed and previewed correctl
 license: MIT
 metadata:
   author: hyz-is
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # HYZIS SEO and GEO
