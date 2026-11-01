@@ -83,7 +83,18 @@ func CustomerFields(page components.Page) template.HTML {
 - Text arrives by props from the glossary; a component never hard-codes a label.
 - Every list has an `Empty`; every async action has a loading and an error path; every destructive action has a confirmation or an undo.
 - Status is a word (with a dot or badge), never colour alone.
+- A label inside a component -- a counter, a tab, a chip, a badge, a small button -- is one word. Two or three words wrap inside the box and break its layout, worst on a phone: "executando / pendentes / concluídos", not "em andamento / para aprovar / concluídas". Longer phrasing belongs to headings and body text.
 - The page stays usable without JavaScript where the stack allows (forms post, links navigate); HTMX enhances.
+
+## The family signature
+
+A product HYZIS builds under the brand partnership signs itself "Desenvolvido por [HYZIS] em [Arandu]", discreetly, only when the client's contract allows it:
+
+- Words and marks, never the names as plain text: "Desenvolvido por", the HYZIS mark (`logo-hyzis.svg`), "em", the Arandu mark (`aru-icon.svg`). The marks are masks in the ink around them (foreground at about 75%), the same size as the text, with each link's name in `aria-label`.
+- Each mark is a link: HYZIS opens https://hyz.is and Arandu opens https://arandu.io. On a native app, it opens the phone's browser.
+- Web: one line in the footer of the public layout, as the sibling products do (`.footer-signature` with `.brandmark-hyzis` / `.brandmark-arandu`).
+- Native app (Ayra): never on the account screen next to "Sair". The app has an About screen ("Sobre", reached from the account screen) with the mark, the version, one sentence about the app and, at its foot, the signature.
+- Not in the panel's chrome, the sign-in form or any transactional screen.
 
 ## References
 
