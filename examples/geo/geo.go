@@ -62,8 +62,9 @@ func PricingMetadata(cfg geo.Config) (geo.Metadata, error) {
 	})
 }
 
-// DiscoveryModule is wired once, in bootstrap, and its routes registered with
-// the application's router: Routes(r) or HTTPRoutes().
+// DiscoveryModule is built once, in bootstrap, and listed among the
+// application's providers as foundation.Component(DiscoveryModule(cfg, catalog)).
+// The framework boots it and registers the routes of the enabled surfaces.
 func DiscoveryModule(cfg geo.Config, catalog geo.Catalog) *geo.Module {
 	return geo.NewModule(cfg, catalog)
 }

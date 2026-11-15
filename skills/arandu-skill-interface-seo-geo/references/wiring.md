@@ -1,6 +1,6 @@
 # Wiring hesape/geo
 
-The working reference is `hyz-is/hyz.is` (`app/Services/Discovery.go`, wired in `bootstrap/app.go`); `freelas-sh/freelas.sh` is a second consumer. Wiring is explicit in `bootstrap/app.go` — no container, no auto-discovery.
+The working references are the project skeleton `arandu-io/arandu` (`bootstrap/app.go` lists the module, `config/geo.go` reads the environment, `app/Providers/AppServiceProvider.go` holds the catalogue) and `hyz-is/hyz.is` (`app/Services/Discovery.go`); `freelas-sh/freelas.sh` is a second consumer. Wiring is explicit in `bootstrap/app.go` — no container, no auto-discovery.
 
 ## 1. Configuration from the environment
 
@@ -53,14 +53,15 @@ For dynamic content (blog posts, public profiles, public listings) the catalogue
 
 <!-- example: examples/geo/geo.go#DiscoveryModule -->
 ```go
-// DiscoveryModule is wired once, in bootstrap, and its routes registered with
-// the application's router: Routes(r) or HTTPRoutes().
+// DiscoveryModule is built once, in bootstrap, and listed among the
+// application's providers as foundation.Component(DiscoveryModule(cfg, catalog)).
+// The framework boots it and registers the routes of the enabled surfaces.
 func DiscoveryModule(cfg geo.Config, catalog geo.Catalog) *geo.Module {
 	return geo.NewModule(cfg, catalog)
 }
 ```
 
-In bootstrap: build the module, call `Boot(ctx)` so a bad configuration (indexing without an https origin) stops the start-up, and register `HTTPRoutes()` on the router (or `Routes(r)`). Disabled surfaces are absent, not answering 404 behind a branch.
+In `bootstrap/app.go`, list the module among the providers of `foundation.Configure(...).WithProviders(...)`, wrapped as the framework asks of a hesape module: `foundation.Component(geo.NewModule(cfg, catalog))`. The framework boots it, so a bad configuration (indexing without an https origin) stops the start-up, and registers the routes of the enabled surfaces itself: there is no line for the router and no call to `Boot`, and disabled surfaces are absent, not answering 404 behind a branch. `HTTPRoutes()` and `Routes(r)` are what the framework calls; an application does not call them, a test of the surfaces does.
 
 ## 4. Per-page metadata
 
