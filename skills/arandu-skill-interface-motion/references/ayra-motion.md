@@ -1,6 +1,6 @@
 # Motion in Ayra
 
-Ayra redraws a screen every frame and has no CSS, no transition system and no platform reduced-motion signal (none in v0.1.0). Motion is computed from the frame clock.
+Ayra redraws a screen every frame and has no CSS, no transition system and no platform reduced-motion signal (none in v0.9.4). Motion is computed from the frame clock.
 
 - `c.Now` (the frame's time, from the embedded `layout.Context`) and a start time held in the screen's state give the progress `t` in [0, 1].
 - Ease the progress (cubic ease-out: `1 - (1-t)^3`) and apply it to opacity (`paint.PushOpacity`) or to an offset (`op.Offset`).

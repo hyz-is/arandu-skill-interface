@@ -1,4 +1,4 @@
-# Kyse component map (v0.35.0)
+# Kyse component map (v0.52.2)
 
 Every component is `components.<Name>(components.<Name>Props{…}) template.HTML`, and every props struct embeds `ComponentProps` (`Class`, `Replace`, `Attrs`, `Parts`, `Theme`, `Style`, `Behavior`, `Events`). Fields below are the component's own; parts are the `data-part` names `Parts` can reach. Source: `github.com/arandu-io/kyse/components/<name>.kyse.go`. Check a field against the source before using one not listed here — the compiler will refuse a wrong one.
 
@@ -18,13 +18,15 @@ Measured usage in nine Arandu apps (most called first): Field, Alert, Select, Ba
 | Checkbox | Name, Label, Value, Hint, Page, Checked, Required, Disabled | root, input, content, label, message, hint |
 | Switch | Name, Label, Value, Hint, Page, On, Disabled | root, content, label, input, message, hint |
 | RadioGroup | Name, Label, Value, Hint, Page, Options, Required | root, label, group, option, input, option-label, message, hint |
-| SegmentedControl | Name, Label, Options, Value, Size, Ypy* | root, label, group, option, segment |
-| Masked | Name, Pattern (`0` digit, `9` optional digit, `#` repeating, `A` alphanumeric, `S` letter), Patterns, Reverse, Value, Page, AriaLabel | root, input, raw |
+| SegmentedControl | Name, Label, Options, Value, Size, YpyGet, YpyPost, YpyTarget, YpySwap, YpyTrigger | root, label, group, option, segment |
+| Masked | Name, Pattern (`0` digit, `9` optional digit, `#` repeating, `A` alphanumeric, `S` letter, `U` capital letter, `X` capital alphanumeric), Patterns, Reverse, Value, Page, AriaLabel | root, input, raw |
 | NumberInput | Name, Label, Value, Min, Max, Step, Unit, Page | root, label, group, decrement, input, increment, unit, message, hint |
 | Password | Name, Label, Policy, Page, Autocomplete, Confirming | root, label, group, input, reveal, panel, meter, fill, strength, requirements, requirement, done, message, hint |
 | OneTimeCode | Name, Length, Value, Page, Label, Alphanumeric | root, square, raw, message |
 | DateTimePicker | Name, Label, Kind, Value, Min, Max, Step, Page, MonthNames, WeekdayNames | root, label, group, input, open, panel, message, hint |
 | Calendar | ID, Label, Month, Value, Min, Max, MonthNames, WeekdayNames, FirstDay, Target | root, header, title, previous, next, grid, weekday, week, day, footer |
+| DateRangePicker | Page, Name, FromName, ToName, ID, Label, From, To, Min, Max, Month, DateFormat, Placeholder, PanelLabel, Hint, Required, Disabled, Presets, MonthNames, WeekdayNames, FirstDay, PreviousLabel, NextLabel, PendingLabel, ClearLabel | root, label, group, from, to, trigger, value, panel, presets, preset, months, month, month-title, month-previous, month-next, month-grid, weekday, week, day, actions, clear, status, backdrop, message, hint |
+| HiddenInput | Name, ID, Value, Page | root |
 | ColorPicker | Name, Label, Value, Swatches, Page | root, label, group, input, readout, message, hint |
 | RangeSlider | Name, Label, Value, Min, Max, Step, Unit, ShowValue, Page | root, label, input, value, message, hint |
 | Rating | Name, Label, Value, Count, OptionLabels, Page, ReadOnly | root, label, group, option, star, message, hint |
@@ -39,7 +41,7 @@ Measured usage in nine Arandu apps (most called first): Field, Alert, Select, Ba
 |---|---|---|
 | Button | Label, Variant (default, secondary, outline, ghost, destructive, link), Size (default, xs, sm, lg, icon), Type, Disabled, YpyPost, YpyGet, YpyTarget, YpySwap, YpyConfirm | root |
 | ButtonGroup | Label, Buttons []ButtonProps, Vertical, Separated | root, button, separator |
-| SplitButton | Label, URL, Type, Variant, Size, MenuLabel, Items, Ypy* | root, action, trigger, panel, menu, item, shortcut |
+| SplitButton | Label, URL, Type, Variant, Size, MenuLabel, Items, YpyPost, YpyGet, YpyTarget, YpySwap | root, action, trigger, panel, menu, item, shortcut |
 | DropdownMenu | ID, Label, Variant, Size, Items, Side, Align | root, trigger, panel, menu, item |
 | CopyButton | Value, SourceID, Label, CopiedLabel, Variant, Size, IconOnly | root, feedback |
 | DeleteRow | URL, Target, Label, Confirm, Description, Variant, IconOnly | root |
@@ -55,7 +57,7 @@ Measured usage in nine Arandu apps (most called first): Field, Alert, Select, Ba
 | Component | Key fields | Parts |
 |---|---|---|
 | Table | Caption, Columns []TableColumn{Label, Key, Sortable, Hideable, Hidden, Align}, Rows []TableRow{Cells []TableCell{Text, SortValue}, Key, Label, Selected}, Empty, SelectName, BulkActions, SortKey, SortDir, SortURL, YpyTarget, YpySwap | root, table, caption, head, header-cell, row, cell, select-all, select, bulk, count, sort, columns, toggle |
-| DataTable | ID, Label, URL, Caption, Columns, Rows, Empty, Query, SearchName, Filters []DataTableFilter, SortKey, SortDir, Page, Pages, Total, PageSize, PageSizes, BulkActions | root, toolbar, search, indicator, columns, toggle, pagination, sizes, showing, footer, filter, facet, facet-chosen, page-of, previous, next |
+| DataTable | ID, Label, URL, State, Result (*pagination.ListingResult), Paginator, PageData, Caption, Columns, Rows, Complete, Searchable, Filters []DataTableFilter, PageSize, PageSizes, FullPager, HeaderMenu, Lines, Empty, SelectName, BulkActions | root, toolbar, search, indicator, columns, toggle, pagination, sizes, showing, footer, filter, facet, facet-chosen, page-of, previous, next |
 | StatCard | Title, Meta, Columns []string, Rows []StatRow{Label, Values}, Empty | root, header, title, meta, table |
 | Card | Title, Description, Href, Meta, Badge, BadgeVariant | root, header, title, description, meta |
 | ContainerCard | Title, Description, URL, ImageURL, Alt, Meta, ActionLabel, ActionURL, Wide | root, layout, media, body, title, description, meta, footer |
@@ -84,6 +86,8 @@ Measured usage in nine Arandu apps (most called first): Field, Alert, Select, Ba
 | Empty | Title, Message, ActionLabel, ActionURL | root, header, title, message, action |
 | Skeleton | Shape (line, block, circle), Width (full, 3/4, 2/3, 1/2, 1/4), Label | root |
 | LazyLoad | URL, Label, Deferred, Message | root, placeholder |
+| DialogTrigger | Dialog, Label, Href, Variant, Size, Icon, IconOnly | root, icon |
+| FormDialog | ID, Title, Description, Body, Forms, Action, Method, Token, Multipart, NoBoost, SubmitLabel, SubmitVariant, CancelLabel, CloseLabel, Size, Alert, Page, Open | root, content, header, title, description, body, footer, cancel, submit, close |
 | Dialog | ID, Title, Message, ConfirmLabel, ConfirmVariant, Action, Method, CancelLabel, Alert, Token | root, content, header, title, message, footer, cancel, confirm |
 | Drawer | ID, Side, Title, Description, Links, CloseLabel | root, content, header, title, description, nav, link, footer, close |
 | Popover | ID, Label, Variant, Size, Title, Description, Content, Side, Align | root, trigger, panel, header, title, description |

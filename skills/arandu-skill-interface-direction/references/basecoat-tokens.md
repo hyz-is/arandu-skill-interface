@@ -1,6 +1,6 @@
 # Basecoat tokens
 
-Measured in the Arandu skeleton (`arandu-io/arandu` v0.35.1, `resources/css/`), the source every Kyse project starts from. Ayra's palette is generated from the same file.
+Measured in the Arandu skeleton (`arandu-io/arandu` v0.43.2, `resources/css/`), the source every Kyse project starts from. Ayra's palette is generated from the same file.
 
 ## Where things live
 

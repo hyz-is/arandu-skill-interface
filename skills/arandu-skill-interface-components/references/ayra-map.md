@@ -1,4 +1,4 @@
-# Ayra widget map (v0.1.0)
+# Ayra widget map (v0.9.4)
 
 Ayra draws native windows with a Gio fork, in immediate mode, on the GPU. A screen is a function `func(c ayra.Context) ayra.Dimensions`, redrawn every frame; a control is `widget.XProps{…}.Layout(c.With(gtx), &state)` where the props are this frame's appearance and the state (`widget.Button`, `widget.Input`, `widget.Toggle` …) is held by the caller across frames.
 
@@ -81,6 +81,22 @@ func InvoicesScreen(c ayra.Context, s *InvoicesState) ayra.Dimensions {
 | TextProps (`Content`, `Role`, `Tone`, `MaxLines`) | headings and text | — |
 | ToastProps | Toast | `*Toasts` |
 | TreeProps | Tree | `*Tree` |
+| ActiveSearchProps | ActiveSearch | `*ActiveSearch` |
+| ComboboxProps | Combobox | `*Combobox` |
+| DataTableProps | DataTable | `*DataTable` |
+| DateRangePickerProps, DateTimePickerProps | DateRangePicker, DateTimePicker | `*DateRange`, `*DateTime` |
+| DeleteRowProps | DeleteRow | `*DeleteRow` |
+| DialogTriggerProps, FormDialogProps | DialogTrigger, FormDialog | `*Button`, `*FormDialog` |
+| EditInPlaceProps, FileUploadProps | EditInPlace, FileUpload | `*EditInPlace`, `*FileUpload` |
+| HoverCardProps (`trigger`, `content`) | HoverCard | `*HoverCard` |
+| IconProps, ImageProps, ResponsiveImageProps, VideoProps | icons, images and video | `*Image`, `*ResponsiveImage`, `*Video` |
+| InputGroupProps (`first`, `rest...`), InputAddonProps | InputGroup | — |
+| KeyboardProps | — (on-screen keyboard for an address or a password) | `*Keyboard` |
+| LazyLoadProps (`content`), LoadMoreProps | LazyLoad, LoadMore | `*LazyLoad`, `*LoadMore` |
+| MaskedProps, OneTimeCodeProps | Masked, OneTimeCode | `*Masked`, `*OneTimeCode` |
+| OptimisticToggleProps | OptimisticToggle | `*OptimisticToggle` |
+| OutputProps, RelativeTimeProps | Output, RelativeTime | — |
+| ThemeToggleProps | ThemeToggle | `*Button` |
 
 <!-- example: examples/ayra/screens.go#FailureAlert -->
 ```go

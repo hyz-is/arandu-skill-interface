@@ -1,6 +1,6 @@
-# hesape/geo API (hesape v0.63.0)
+# hesape/geo API (hesape v0.106.0)
 
-Paths are relative to `$(go env GOMODCACHE)/github.com/arandu-io/hesape@v0.63.0/geo`.
+Paths are relative to `$(go env GOMODCACHE)/github.com/arandu-io/hesape@v0.106.0/geo`.
 
 ## Surfaces (`config.go:10–39`)
 

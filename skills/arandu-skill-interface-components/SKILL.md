@@ -1,6 +1,6 @@
 ---
 name: arandu-skill-interface-components
-description: Use when building or fixing any screen, page, form, table, list, dashboard, settings page, dialog, app shell, sidebar or empty, loading and error state in a Kyse (Go + YPY + Basecoat) product or an Ayra (Go/Gio) app - "monta a tela", "build the form", "this page has no loading or error state", "the layout breaks on mobile", "make this accessible". Applies the design with the 76 real Kyse components (ComponentProps with Class, Parts, Theme, scoped kyse.CSS, Behavior, Events, data-part, data-variant, YPY props) and the 59 Ayra widgets (XProps.Layout with caller-held state), covering variants, every state, forms with server validation, Brazilian masks, responsive layout and accessibility, under a strict CSP with no inline style or script. Not for choosing the visual direction (arandu-skill-interface-direction), writing the words (arandu-skill-interface-content) or motion (arandu-skill-interface-motion).
+description: Use when building or fixing any screen, page, form, table, list, dashboard, settings page, dialog, app shell, sidebar or empty, loading and error state in a Kyse (Go + YPY + Basecoat) product or an Ayra (Go/Gio) app - "monta a tela", "build the form", "this page has no loading or error state", "the layout breaks on mobile", "make this accessible". Applies the design with the 80 real Kyse components (ComponentProps with Class, Parts, Theme, scoped kyse.CSS, Behavior, Events, data-part, data-variant, YPY props) and the 85 Ayra widgets (XProps.Layout with caller-held state), covering variants, every state, forms with server validation, Brazilian masks, responsive layout and accessibility, under a strict CSP with no inline style or script. Not for choosing the visual direction (arandu-skill-interface-direction), writing the words (arandu-skill-interface-content) or motion (arandu-skill-interface-motion).
 license: MIT
 metadata:
   author: hyz-is
@@ -98,13 +98,13 @@ A product HYZIS builds under the brand partnership signs itself "Desenvolvido po
 
 ## References
 
-- [references/kyse-map.md](references/kyse-map.md) — the 76 Kyse components by job, with props types and parts.
+- [references/kyse-map.md](references/kyse-map.md) — the 80 Kyse components by job, with props types and parts.
 - [references/kyse-patterns.md](references/kyse-patterns.md) — ComponentProps in practice: parts, class, replace, theme, scoped CSS.
 - [references/shadcn-in-kyse.md](references/shadcn-in-kyse.md) — shadcn composition patterns as Kyse and Ayra props.
 - [references/ypy-states.md](references/ypy-states.md) — server-rendered loading, empty, error, swaps, toasts.
 - [references/states.md](references/states.md) — the state lattice and the kinds of empty.
 - [references/forms.md](references/forms.md) — fields, validation, masks, Brazilian formats.
 - [references/layouts.md](references/layouts.md) — app shell, marketing, auth, partials.
-- [references/ayra-map.md](references/ayra-map.md) — the 59 Ayra widgets, state, layout, limits.
+- [references/ayra-map.md](references/ayra-map.md) — the 85 Ayra widgets, state, layout, limits.
 - [references/accessibility.md](references/accessibility.md) — the checklist for Kyse/YPY and Ayra.
 - [references/coverage.md](references/coverage.md) — what each screen archetype needs to be complete.

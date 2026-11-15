@@ -86,7 +86,7 @@ func SavedToast() template.HTML {
 
 - The answering view for a partial request draws the piece and nothing around it (no `@extends`).
 - Keep `href` beside `ypy-get` so the link still navigates without scripts; add `ypy-push-url="true"` when the address should follow.
-- The server tells a fragment from a page by `YPY-Request`, and the element the request fills by `YPY-Target`, whose value is `tag#id` (`div#notes`), not the bare id: compare the id part (`Context.Targets("notes")`), never the whole header against an id. Every route that answers both a page and a fragment sends `Vary: YPY-Request`.
+- The server tells a fragment from a page by `YPY-Request`, and the element the request fills by `YPY-Target`, whose value is `tag#id` (`div#notes`), not the bare id: compare the id part (`Context.Targets("notes")`), never the whole header against an id. Every route that answers both a page and a fragment sends `Vary: YPY-Request, YPY-Target`.
 - Buttons carry YPY through props (`YpyPost`, `YpyGet`, `YpyTarget`, `YpySwap`, `YpyConfirm`), written only when non-empty — an empty `ypy-post` would post to the current URL.
 - A swap that names no style morphs. Write `YpySwap: "innerHTML"` (or `outerHTML`) only where the raw replacement is what you mean, and `beforeend` for a toast tray.
 - Attributes reach descendants only with `:inherited` (`ypy-target:inherited="#out"`); one written on a container does nothing for the elements inside it.

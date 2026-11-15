@@ -111,4 +111,4 @@ func ReplaceRootClass() template.HTML {
 
 ## Pages answer whole or in part
 
-The skeleton's pattern: a listing page `@include`s a partial whose root has an id; the "next page" link carries `href` (works without scripts) **and** `ypy-get`, `ypy-target="#id"`, `ypy-swap="outerHTML"`, `ypy-push-url="true"`; the controller asks `Context.Targets("id")` (the `YPY-Target` header carries `tag#id`, not the bare id) and answers the partial alone or the whole page, with `Vary: YPY-Request` on the route. A partial never `@extends` a layout — the swap would nest a second header inside the page.
+The skeleton's pattern: a listing page `@include`s a partial whose root has an id; the "next page" link carries `href` (works without scripts) **and** `ypy-get`, `ypy-target="#id"`, `ypy-swap="outerHTML"`, `ypy-push-url="true"`; the controller asks `Context.Targets("id")` (the `YPY-Target` header carries `tag#id`, not the bare id) and answers the partial alone or the whole page, with `Vary: YPY-Request, YPY-Target` on the route. A partial never `@extends` a layout — the swap would nest a second header inside the page.
