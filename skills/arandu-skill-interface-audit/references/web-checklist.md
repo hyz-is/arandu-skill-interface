@@ -1,4 +1,4 @@
-# Web checklist (Kyse + HTMX)
+# Web checklist (Kyse + YPY)
 
 Adapted from the Vercel Web Interface Guidelines (MIT, see `NOTICE.md`): React-specific items removed, server-rendered and CSP items added. Report as `file:line — finding` where the source is known.
 
@@ -42,8 +42,8 @@ Adapted from the Vercel Web Interface Guidelines (MIT, see `NOTICE.md`): React-s
 - [ ] No layout reads in loops in behaviours.
 
 ## Navigation and state
-- [ ] Filters, tabs and pagination reflected in the URL (`hx-push-url`).
-- [ ] Links work with modifier keys and without JavaScript (`href` beside `hx-get`).
+- [ ] Filters, tabs and pagination reflected in the URL (`ypy-push-url`).
+- [ ] Links work with modifier keys and without JavaScript (`href` beside `ypy-get`).
 - [ ] Destructive actions have a confirmation or an undo.
 - [ ] Boosted navigation updates canonical/robots/schema (page-metadata behaviour) on public sites.
 

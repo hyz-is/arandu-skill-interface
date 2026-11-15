@@ -24,7 +24,7 @@ Frontmatter for every skill: `name`, `description` (below, exact), `license: MIT
 ### 2.1 `arandu-skill-interface` — orchestrator
 
 **description:**
-> Orchestrates HYZIS interface work end to end for products built on Kyse (Go + HTMX + Basecoat) and Ayra (native Go/Gio): sequences discovery, visual direction, content, components, motion, SEO/GEO and the final anti-AI audit, and keeps PRODUCT.md, DESIGN.md and the content glossary as the shared state. Use when the request spans more than one of those areas: "make this interface premium", "refine the product", "build the pages of X", "redesign the dashboard", "make it look designed by a senior team", "harmonise the app", or a new product's first screens. Not for a single focused task that one specialist arandu-skill-interface-* skill already covers (a button label, a sitemap, one animation, an audit only); route those to that skill.
+> Orchestrates HYZIS interface work end to end for products built on Kyse (Go + YPY + Basecoat) and Ayra (native Go/Gio): sequences discovery, visual direction, content, components, motion, SEO/GEO and the final anti-AI audit, and keeps PRODUCT.md, DESIGN.md and the content glossary as the shared state. Use when the request spans more than one of those areas: "make this interface premium", "refine the product", "build the pages of X", "redesign the dashboard", "make it look designed by a senior team", "harmonise the app", or a new product's first screens. Not for a single focused task that one specialist arandu-skill-interface-* skill already covers (a button label, a sitemap, one animation, an audit only); route those to that skill.
 
 - **Does:** classifies the job (new world / extend / refine / redesign), runs the default flow (§3), resolves precedence (§4), records learned constraints in `PRODUCT.md`, writes the final report (what changed, evidence, limits).
 - **Fires when:** a request covers two or more areas, or names the whole product or a set of pages.
@@ -59,22 +59,22 @@ Frontmatter for every skill: `name`, `description` (below, exact), `license: MIT
 ### 2.3 `arandu-skill-interface-components`
 
 **description:**
-> Applies the design to real components: Kyse in server-rendered Go views (76 components, ComponentProps with Class, Parts, Theme, scoped kyse.CSS, Behavior, Events, data-part, data-variant, HTMX props) and Ayra widgets in native Go/Gio (XProps.Layout with caller-held state). Covers variants, sizes, every state (loading, empty, error, partial, success, disabled, offline, permission), forms with server validation, responsive layout, accessibility, icons and images, under a strict CSP with no inline style or script. Use when building or fixing screens, pages, forms, tables, dashboards, dialogs, shells, sidebars or empty states in a .kyse.go view or an Ayra screen. Not for choosing the visual direction (arandu-skill-interface-direction), writing the words (arandu-skill-interface-content) or motion (arandu-skill-interface-motion).
+> Applies the design to real components: Kyse in server-rendered Go views (76 components, ComponentProps with Class, Parts, Theme, scoped kyse.CSS, Behavior, Events, data-part, data-variant, YPY props) and Ayra widgets in native Go/Gio (XProps.Layout with caller-held state). Covers variants, sizes, every state (loading, empty, error, partial, success, disabled, offline, permission), forms with server validation, responsive layout, accessibility, icons and images, under a strict CSP with no inline style or script. Use when building or fixing screens, pages, forms, tables, dashboards, dialogs, shells, sidebars or empty states in a .kyse.go view or an Ayra screen. Not for choosing the visual direction (arandu-skill-interface-direction), writing the words (arandu-skill-interface-content) or motion (arandu-skill-interface-motion).
 
-- **Does:** maps a need to an existing component (never a new one when Kyse/Ayra has it), composes shadcn-style (explicit variants, parts, children over flags), styles through `Parts`/`Class`/`kyse.CSS`/`custom.css` only, builds the state lattice with HTMX partials, keeps text in props/translations.
+- **Does:** maps a need to an existing component (never a new one when Kyse/Ayra has it), composes shadcn-style (explicit variants, parts, children over flags), styles through `Parts`/`Class`/`kyse.CSS`/`custom.css` only, builds the state lattice with YPY partials, keeps text in props/translations.
 - **Fires when:** a `.kyse.go` view, layout or partial, or an Ayra screen, is created or changed.
 - **Does not:** invent a component Kyse/Ayra already has; write inline `style=`/`<style>`/`<script>`/`on*=`; add Alpine or a JS library; decide palette or type.
 - **Reads:** `DESIGN.md`, glossary, `docs/content/realistic-data.md`. **Writes:** views, layouts, partials, `custom.css` component rules, Ayra screens.
 - **References:**
   - `kyse-map.md` — the 76 components by job (form, data, navigation, overlay, feedback, media, layout) with props type and the parts each publishes.
   - `kyse-patterns.md` — `ComponentProps` in practice; parts vs class vs `kyse.CSS`; `Replace`; themes; literal-class rule; compiled examples.
-  - `htmx-states.md` — server-rendered loading (`hx-indicator`, `.htmx-request`), empty, error, partial swaps, toasts into `#toaster`, the 422/redirect rule, partials that do not extend a layout.
+  - `ypy-states.md` — server-rendered loading (`ypy-indicator`, `.ypy-request`), empty, error, partial swaps, toasts into `#toaster`, the 422/redirect rule, partials that do not extend a layout.
   - `forms.md` — `components.Field` + `Page` (FieldError/OldOr), labels, inline errors, error summary, masks (CPF, CNPJ, CEP, phone), paste and autocomplete.
   - `states.md` — the state lattice and the empty-state types, with Kyse and Ayra examples.
   - `layouts.md` — app shell (sidebar + topbar + page head + main), marketing layout, auth layout; widths 1320 px lists / 880 px forms (Arandu pattern).
   - `ayra-map.md` — the 59 widgets, the Kyse names they mirror, state types, layout (`Flex`, `Stack`, `List`), theme access, platform limits.
   - `shadcn-in-kyse.md` — shadcn composition patterns as Kyse props and Ayra props (addendum §4).
-  - `accessibility.md` — checklist adapted from S7 for Kyse/HTMX; Ayra limits.
+  - `accessibility.md` — checklist adapted from S7 for Kyse/YPY; Ayra limits.
   - `coverage.md` — archetype completeness (data table, settings, search, detail, first run, billing, pricing, checkout, onboarding, destructive confirm, invite), restated.
 - **Owns matrix rows:** K1–K10, V5/V7/V11 (application), G6 (with seo).
 

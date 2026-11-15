@@ -9,7 +9,7 @@ metadata:
 
 # HYZIS UI direction
 
-Decide how a product looks, once, from evidence, and write it down where every later step reads it. The product is built on Kyse (Go views, HTMX, Basecoat tokens, Tailwind v4 compiled by `aru view:build`) or Ayra (native Go/Gio, palette generated from the same Basecoat tokens). The direction is never a mood: it is a `PRODUCT.md` with confirmed facts and a `DESIGN.md` with token values a stylesheet can carry.
+Decide how a product looks, once, from evidence, and write it down where every later step reads it. The product is built on Kyse (Go views, YPY, Basecoat tokens, Tailwind v4 compiled by `aru view:build`) or Ayra (native Go/Gio, palette generated from the same Basecoat tokens). The direction is never a mood: it is a `PRODUCT.md` with confirmed facts and a `DESIGN.md` with token values a stylesheet can carry.
 
 ## When this fires
 

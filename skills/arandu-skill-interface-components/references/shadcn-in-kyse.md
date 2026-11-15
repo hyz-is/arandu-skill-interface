@@ -1,6 +1,6 @@
 # shadcn composition, as it exists in Kyse and Ayra
 
-Kyse was adapted from shadcn-htmx: Basecoat carries shadcn's tokens and component classes, and Kyse keeps shadcn's attribute API (`data-variant`, `data-size`). Ayra mirrors Kyse's names and vocabulary. The **patterns** of shadcn transfer; its React code does not. Never paste JSX, `cn()`, Radix primitives or `className` strings.
+Kyse was adapted from a Go port of shadcn: Basecoat carries shadcn's tokens and component classes, and Kyse keeps shadcn's attribute API (`data-variant`, `data-size`). Ayra mirrors Kyse's names and vocabulary. The **patterns** of shadcn transfer; its React code does not. Never paste JSX, `cn()`, Radix primitives or `className` strings.
 
 | shadcn pattern | In Kyse | In Ayra |
 |---|---|---|
@@ -10,7 +10,7 @@ Kyse was adapted from shadcn-htmx: Basecoat carries shadcn's tokens and componen
 | `className` merge with `cn()` | `Class` adds after the component's classes; `Replace` substitutes | not applicable — appearance comes from the theme |
 | Theming by CSS variables | Basecoat tokens in `custom.css`; `Theme` → `data-theme` | `theme.Theme` from the same tokens; `c.Theme` override |
 | Data-driven components (`DataTable` columns) | `Columns []TableColumn`, `Rows []TableRow` | `Columns []widget.Column`, `Rows [][]string` |
-| Controlled vs uncontrolled state | the server owns state; `Page` gives a form its rejected values; HTMX swaps the part that changed | the caller holds state (`widget.Button`, `widget.Input` …) across frames |
+| Controlled vs uncontrolled state | the server owns state; `Page` gives a form its rejected values; YPY swaps the part that changed | the caller holds state (`widget.Button`, `widget.Input` …) across frames |
 | Explicit variant components over modes (`<AlertDestructive>` vs `<Alert destructive>`) | `Variant: "destructive"` on the same component; never a new component per mode | same |
 
 Rules that follow:

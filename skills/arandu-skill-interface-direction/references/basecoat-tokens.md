@@ -6,7 +6,7 @@ Measured in the Arandu skeleton (`arandu-io/arandu` v0.35.1, `resources/css/`), 
 
 | File | Owner | Edit? |
 |---|---|---|
-| `resources/css/app.css` | skeleton | **No.** An upgrade rewrites it. It imports Basecoat, sets `@theme` fonts, the six accent themes, htmx indicator rules, and imports `custom.css` **last**. |
+| `resources/css/app.css` | skeleton | **No.** An upgrade rewrites it. It imports Basecoat, sets `@theme` fonts, the six accent themes, YPY indicator rules, and imports `custom.css` **last**. |
 | `resources/css/basecoat/**` | vendored Basecoat (MIT) | Only through `vendor.sh`; never by hand. |
 | `resources/css/custom.css` | the project | **Yes.** Redeclare tokens and write component rules here; it wins ties because it is last. |
 | `resources/css/fonts.css` | `aru font:add` | Generated; do not edit. |

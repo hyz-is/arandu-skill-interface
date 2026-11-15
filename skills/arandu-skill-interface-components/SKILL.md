@@ -1,6 +1,6 @@
 ---
 name: arandu-skill-interface-components
-description: Use when building or fixing any screen, page, form, table, list, dashboard, settings page, dialog, app shell, sidebar or empty, loading and error state in a Kyse (Go + HTMX + Basecoat) product or an Ayra (Go/Gio) app - "monta a tela", "build the form", "this page has no loading or error state", "the layout breaks on mobile", "make this accessible". Applies the design with the 76 real Kyse components (ComponentProps with Class, Parts, Theme, scoped kyse.CSS, Behavior, Events, data-part, data-variant, HTMX props) and the 59 Ayra widgets (XProps.Layout with caller-held state), covering variants, every state, forms with server validation, Brazilian masks, responsive layout and accessibility, under a strict CSP with no inline style or script. Not for choosing the visual direction (arandu-skill-interface-direction), writing the words (arandu-skill-interface-content) or motion (arandu-skill-interface-motion).
+description: Use when building or fixing any screen, page, form, table, list, dashboard, settings page, dialog, app shell, sidebar or empty, loading and error state in a Kyse (Go + YPY + Basecoat) product or an Ayra (Go/Gio) app - "monta a tela", "build the form", "this page has no loading or error state", "the layout breaks on mobile", "make this accessible". Applies the design with the 76 real Kyse components (ComponentProps with Class, Parts, Theme, scoped kyse.CSS, Behavior, Events, data-part, data-variant, YPY props) and the 59 Ayra widgets (XProps.Layout with caller-held state), covering variants, every state, forms with server validation, Brazilian masks, responsive layout and accessibility, under a strict CSP with no inline style or script. Not for choosing the visual direction (arandu-skill-interface-direction), writing the words (arandu-skill-interface-content) or motion (arandu-skill-interface-motion).
 license: MIT
 metadata:
   author: hyz-is
@@ -35,10 +35,10 @@ Build screens from the components the stack already has, in the shape the direct
 
 ## Procedure
 
-1. **Name the surface and its job** in one line (who arrives, what they do, the next action) and its visitor mode (operate / read / persuade). Pick the layout from [references/layouts.md](references/layouts.md): app shell, marketing, auth, or a partial that answers an HTMX request (a partial never extends a layout).
+1. **Name the surface and its job** in one line (who arrives, what they do, the next action) and its visitor mode (operate / read / persuade). Pick the layout from [references/layouts.md](references/layouts.md): app shell, marketing, auth, or a partial that answers a YPY request (a partial never extends a layout).
 2. **Map every need to an existing component** with [references/kyse-map.md](references/kyse-map.md) (web) or [references/ayra-map.md](references/ayra-map.md) (native). Prefer the component even when it needs a part override; write markup by hand only for page structure (sections, grids) using Basecoat classes and the project's own classes.
 3. **Compose shadcn-style** — explicit `Variant` and `Size`, parts instead of structural selectors, data in slices of rows/items, children (`template.HTML`) instead of boolean flags — with [references/shadcn-in-kyse.md](references/shadcn-in-kyse.md) and [references/kyse-patterns.md](references/kyse-patterns.md).
-4. **Design the unhappy states first** with [references/states.md](references/states.md) and [references/htmx-states.md](references/htmx-states.md): loading (skeleton shaped like the result, `hx-indicator`), empty (first use vs no results vs no permission), error (what failed, whether anything was lost, the way out), partial, success (same verb as the action), disabled with a reason, offline for Ayra.
+4. **Design the unhappy states first** with [references/states.md](references/states.md) and [references/ypy-states.md](references/ypy-states.md): loading (skeleton shaped like the result, `ypy-indicator`), empty (first use vs no results vs no permission), error (what failed, whether anything was lost, the way out), partial, success (same verb as the action), disabled with a reason, offline for Ayra.
 5. **Forms** with [references/forms.md](references/forms.md): `Field`/`Select`/`Masked`/`Password` with `Page` so each field finds its own message and old value; labels above, hints under, errors inline, the verb on the submit button.
 6. **Fill with realistic data**: shortest and longest plausible values from `docs/content/realistic-data.md` (long company names, R$ values with thousands, dates `dd/mm/aaaa`, 0 and 1 000+ rows). Never Lorem Ipsum or "Usuário Teste".
 7. **Check completeness** against [references/coverage.md](references/coverage.md) for the archetype (data table, settings, search, detail, first run, billing, pricing, checkout, onboarding, destructive confirm, invite).
@@ -84,7 +84,7 @@ func CustomerFields(page components.Page) template.HTML {
 - Every list has an `Empty`; every async action has a loading and an error path; every destructive action has a confirmation or an undo.
 - Status is a word (with a dot or badge), never colour alone.
 - A label inside a component -- a counter, a tab, a chip, a badge, a small button -- is one word. Two or three words wrap inside the box and break its layout, worst on a phone: "executando / pendentes / concluídos", not "em andamento / para aprovar / concluídas". Longer phrasing belongs to headings and body text.
-- The page stays usable without JavaScript where the stack allows (forms post, links navigate); HTMX enhances.
+- The page stays usable without JavaScript where the stack allows (forms post, links navigate); YPY enhances.
 
 ## The family signature
 
@@ -101,10 +101,10 @@ A product HYZIS builds under the brand partnership signs itself "Desenvolvido po
 - [references/kyse-map.md](references/kyse-map.md) — the 76 Kyse components by job, with props types and parts.
 - [references/kyse-patterns.md](references/kyse-patterns.md) — ComponentProps in practice: parts, class, replace, theme, scoped CSS.
 - [references/shadcn-in-kyse.md](references/shadcn-in-kyse.md) — shadcn composition patterns as Kyse and Ayra props.
-- [references/htmx-states.md](references/htmx-states.md) — server-rendered loading, empty, error, swaps, toasts.
+- [references/ypy-states.md](references/ypy-states.md) — server-rendered loading, empty, error, swaps, toasts.
 - [references/states.md](references/states.md) — the state lattice and the kinds of empty.
 - [references/forms.md](references/forms.md) — fields, validation, masks, Brazilian formats.
 - [references/layouts.md](references/layouts.md) — app shell, marketing, auth, partials.
 - [references/ayra-map.md](references/ayra-map.md) — the 59 Ayra widgets, state, layout, limits.
-- [references/accessibility.md](references/accessibility.md) — the checklist for Kyse/HTMX and Ayra.
+- [references/accessibility.md](references/accessibility.md) — the checklist for Kyse/YPY and Ayra.
 - [references/coverage.md](references/coverage.md) — what each screen archetype needs to be complete.

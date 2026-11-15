@@ -5,7 +5,7 @@ Design every state of a component that touches data before the happy path. Each 
 | State | Design | Kyse | Ayra | Common mistake |
 |---|---|---|---|---|
 | Idle | primary action obvious | the page | the screen | treating an empty form as idle |
-| Loading | skeleton shaped like the result, after ~300 ms | `Skeleton`, `LazyLoad`, `htmx-indicator`, `Status` | `SkeletonProps`, `ProgressProps` | centred spinner on a blank page |
+| Loading | skeleton shaped like the result, after ~300 ms | `Skeleton`, `LazyLoad`, `ypy-indicator`, `Status` | `SkeletonProps`, `ProgressProps` | centred spinner on a blank page |
 | Empty | why it is empty + one action | `Empty` (alone or in `Table.Empty`) | `EmptyProps` | "Sem dados", no action |
 | Error | what failed, was anything lost, the way out | `Alert` destructive, `Toast` with `Category: "error"`, field messages via `Page` | `AlertProps{Severity: widget.Failure}` | "Algo deu errado" |
 | Partial | show what loaded, mark what failed | region-level `Alert` inside the region | per-panel alert | hiding the whole page |

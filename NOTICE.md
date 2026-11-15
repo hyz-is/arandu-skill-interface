@@ -18,7 +18,7 @@ Status: entries 1–7 confirmed against the written skills on 18/10/2026; every 
 
 - Source: vercel-labs/web-interface-guidelines @ `434b7f91364665f2f733b310ec54809bf8f37937`, `command.md` (Accessibility, Focus States, Forms, Animation, Typography, Content Handling, Images, Performance, Navigation & State, Touch & Interaction, Dark Mode & Theming, Locale & i18n).
 - Licence: MIT, Copyright (c) 2025 Vercel Labs.
-- Used in: `skills/arandu-skill-interface-components/references/accessibility.md` and `skills/arandu-skill-interface-audit/references/web-checklist.md` (items restated for server-rendered Kyse + HTMX; React-specific items removed).
+- Used in: `skills/arandu-skill-interface-components/references/accessibility.md` and `skills/arandu-skill-interface-audit/references/web-checklist.md` (items restated for server-rendered Kyse + YPY; React-specific items removed).
 
 ### 3. AI-tell pattern names in copy
 

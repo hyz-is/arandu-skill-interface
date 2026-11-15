@@ -1,6 +1,6 @@
 # hyz-is/arandu-skill-interface
 
-Interface skills by HYZIS for products built on our own stack: **Kyse** (Go views + HTMX + Basecoat tokens, under a strict CSP) on the web and **Ayra** (Go/Gio) for native apps. Eight skills in the open [Agent Skills](https://agentskills.io/specification) format — usable by Claude Code, Codex, Cursor, Gemini CLI or any client that reads `SKILL.md` — sequenced by an orchestrator.
+Interface skills by HYZIS for products built on our own stack: **Kyse** (Go views + YPY + Basecoat tokens, under a strict CSP) on the web and **Ayra** (Go/Gio) for native apps. Eight skills in the open [Agent Skills](https://agentskills.io/specification) format — usable by Claude Code, Codex, Cursor, Gemini CLI or any client that reads `SKILL.md` — sequenced by an orchestrator.
 
 | Skill | When it fires |
 |---|---|

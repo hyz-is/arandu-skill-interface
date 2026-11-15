@@ -192,9 +192,9 @@ Owner column: **orch** `arandu-skill-interface`, **dir** `arandu-skill-interface
 
 ## 5. Gaps no public source covers (ours to write)
 
-- **Kyse specifics**: `ComponentProps` (`Class`, `Replace`, `Parts`, `Theme`, `Style kyse.CSS` literal-only), `data-part` naming, variants via `data-variant`/`data-size`, `components.Page` for form state, HTMX props on components, 76 real components (no source names one).
-- **CSP-strict behaviour**: `script-src 'self'`, `style-src 'self'`, no inline style/script, no `unsafe-eval`, no Alpine; behaviours only through `data-kyse-behavior` + `arandu.ui.define` in `custom.js`; scoped styles only through `kyse.CSS` or `custom.css`; the htmx indicator rules already moved to the stylesheet. Every public motion recipe assumes inline styles, React state or a JS animation library.
-- **Server-rendered HTMX states**: loading via `hx-indicator` and the `.htmx-request` class; empty/error as server-rendered partials; 422 redirect pattern of the skeleton; toasts appended to `#toaster` with `hx-swap="beforeend"`; partial views must not extend a layout (Kyse `ButtonProps` docs).
+- **Kyse specifics**: `ComponentProps` (`Class`, `Replace`, `Parts`, `Theme`, `Style kyse.CSS` literal-only), `data-part` naming, variants via `data-variant`/`data-size`, `components.Page` for form state, YPY props on components, 76 real components (no source names one).
+- **CSP-strict behaviour**: `script-src 'self'`, `style-src 'self'`, no inline style/script, no `unsafe-eval`, no Alpine; behaviours only through `data-kyse-behavior` + `arandu.ui.define` in `custom.js`; scoped styles only through `kyse.CSS` or `custom.css`; the YPY indicator rules already moved to the stylesheet. Every public motion recipe assumes inline styles, React state or a JS animation library.
+- **Server-rendered YPY states**: loading via `ypy-indicator` and the `.ypy-request` class; empty/error as server-rendered partials; 422 redirect pattern of the skeleton; toasts appended to `#toaster` with `ypy-swap="beforeend"`; partial views must not extend a layout (Kyse `ButtonProps` docs).
 - **Go-compiled views**: `.kyse.go` + `aru view:build`; class names must be literals in sources Tailwind scans; a class assembled at runtime is unstyled.
 - **hesape/geo**: `Config.Indexing` as the staging switch, `MetadataFor`, `SchemaMarkup`, `Catalog` with Policy/Grant inside, `/llms.txt` and `/llms-full.txt`, the public-catalog rule (never index private pages).
 - **Native Gio constraints (Ayra)**: immediate mode, state held by the caller, theme generated from Basecoat, screen readers only on Android, no reduced-motion signal from the platform, GPU required, golden images through `frame`.
@@ -228,7 +228,7 @@ Owner column: **orch** `arandu-skill-interface`, **dir** `arandu-skill-interface
 | S4 ui-craft (MIT) | — | discovery, state lattice, archetype coverage, voice matrix, metadata honesty |
 | S5 MengTo (MIT) | **pattern catalogue structure and cluster names** (adapted) | removal test, output table |
 | S6 Uncodixfy (MIT) | — | pre-flight "list your defaults" check |
-| S7 web-interface-guidelines (MIT) | **checklist items adapted to Kyse/HTMX** | — |
+| S7 web-interface-guidelines (MIT) | **checklist items adapted to Kyse/YPY** | — |
 | S8 writing-guidelines (MIT) | — | AI-generated tells in prose |
 | S12–S16 voice and microcopy | — | is/is-not voice, tone by emotional state |
 | S17 marketingskills (MIT) | **AI-tell pattern names, the three situations, the gate, the sweeps** (adapted, NOTICE 3) | diagnose-first, three-question gate, competitor profiling layers |

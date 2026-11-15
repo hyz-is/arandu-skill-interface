@@ -24,7 +24,7 @@ func RevealOnScroll() template.HTML {
 
 // ArchiveAction maps a click to an action registered with
 // arandu.ui.action("archive-invoice", …): delegated, so it also works on
-// markup that arrived in an HTMX swap.
+// markup that arrived in a YPY swap.
 func ArchiveAction() template.HTML {
 	return components.Button(components.ButtonProps{
 		Label:   "Arquivar cobrança",

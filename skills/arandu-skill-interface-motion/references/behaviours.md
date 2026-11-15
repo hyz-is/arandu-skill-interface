@@ -58,7 +58,7 @@ arandu.ui.action('archive-invoice', function (event, element) {
 ```go
 // ArchiveAction maps a click to an action registered with
 // arandu.ui.action("archive-invoice", …): delegated, so it also works on
-// markup that arrived in an HTMX swap.
+// markup that arrived in a YPY swap.
 func ArchiveAction() template.HTML {
 	return components.Button(components.ButtonProps{
 		Label:   "Arquivar cobrança",
@@ -70,7 +70,7 @@ func ArchiveAction() template.HTML {
 }
 ```
 
-Prefer HTMX for anything that talks to the server (`HxPost` on the button and a partial in reply); use an action for purely local feedback.
+Prefer YPY for anything that talks to the server (`YpyPost` on the button and a partial in reply); use an action for purely local feedback.
 
 ## Rules
 

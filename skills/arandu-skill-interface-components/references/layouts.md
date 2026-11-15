@@ -4,7 +4,7 @@ Layouts live in `resources/views/layouts/*.kyse.go`. A project usually has three
 
 ## The head every layout carries
 
-From the skeleton (`resources/views/layouts/app.kyse.go`): charset, viewport (never disabling zoom), `htmx-config` with `includeIndicatorStyles:false`, title, favicons, meta description / canonical / Open Graph only when filled (metadata is `arandu-skill-interface-seo-geo`'s), then assets by `view.Asset`: `app.css`, `htmx.min.js`, `ui.js`, `basecoat.bundle.js`, `custom.js` (deferred, in that order) and `theme.js` (not deferred: it sets the theme before first paint). Add `{!! fonts.Preloads() !!}` when the project vendors fonts. `<body hx-boost="true" hx-headers='{"X-CSRF-Token": "…"}'>` is load-bearing for CSRF.
+From the skeleton (`resources/views/layouts/app.kyse.go`): charset, viewport (never disabling zoom), a `ypy-config` meta with `includeIndicatorCSS:false`, `<meta name="ypy-csrf" content="…">`, title, favicons, meta description / canonical / Open Graph only when filled (metadata is `arandu-skill-interface-seo-geo`'s), then assets by `view.Asset`: `app.css`, `ypy.min.js`, `ypy-csrf.min.js`, `ui.js`, `basecoat.bundle.js`, `custom.js` (deferred, in that order) and `theme.js` (not deferred: it sets the theme before first paint). Add `{!! fonts.Preloads() !!}` when the project vendors fonts. `<body ypy-boost:inherited="true">` boosts the links and forms inside it (an attribute reaches descendants only with `:inherited`), and the `ypy-csrf` meta tag is load-bearing for CSRF: the extension sends its token as `X-CSRF-Token` on every same-origin request that is not a GET, so no element carries the token and none can forget it.
 
 ## App shell (operate)
 
@@ -70,4 +70,4 @@ A framed, centred column (max ~420 px), the brand above, one primary action; fie
 
 ## Partials
 
-A partial answers an HTMX request: it draws its own root element (with the id the request targets) and never `@extends` a layout.
+A partial answers a YPY request (`YPY-Request`): it draws its own root element (with the id the request targets) and never `@extends` a layout.

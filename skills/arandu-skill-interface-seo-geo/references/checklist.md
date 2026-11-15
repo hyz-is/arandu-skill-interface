@@ -17,7 +17,7 @@ Record each check with the command or URL and the result.
 - [ ] OG image 1200 × 630, absolute URL, with alt; share preview checked on a deployed URL.
 - [ ] One JSON-LD graph, valid, restating visible facts only.
 - [ ] 404 and signed-in pages: `noindex`, no canonical, no graph.
-- [ ] With `hx-boost`: navigating between two pages updates canonical, robots and the graph (page-metadata behaviour).
+- [ ] With `ypy-boost`: navigating between two pages updates canonical, robots and the graph (page-metadata behaviour).
 
 ## Performance
 

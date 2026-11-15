@@ -1,6 +1,6 @@
 {
   "name": "hyz-is",
-  "description": "HYZIS skills for interfaces built on Kyse (Go + HTMX + Basecoat) and Ayra (Go/Gio).",
+  "description": "HYZIS skills for interfaces built on Kyse (Go + YPY + Basecoat) and Ayra (Go/Gio).",
   "owner": {
     "name": "HYZIS Serviços Digitais Ltda",
     "url": "https://hyz.is"
@@ -15,7 +15,7 @@
       "license": "MIT",
       "homepage": "https://github.com/hyz-is/arandu-skill-interface",
       "repository": "https://github.com/hyz-is/arandu-skill-interface",
-      "keywords": ["kyse", "ayra", "arandu", "htmx", "basecoat", "ui", "ux-writing", "seo", "geo", "audit"],
+      "keywords": ["kyse", "ayra", "arandu", "ypy", "basecoat", "ui", "ux-writing", "seo", "geo", "audit"],
       "skills": [
         "./skills/arandu-skill-interface",
         "./skills/arandu-skill-interface-direction",

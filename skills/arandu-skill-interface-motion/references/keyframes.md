@@ -2,7 +2,7 @@
 
 ## What Basecoat already animates
 
-The skeleton vendors twelve keyframes from shadcn-htmx (MIT) in `resources/css/basecoat/animations.css`, each used by its component and each with a reduced-motion rule in the component CSS:
+The skeleton vendors twelve keyframes from the Go port of shadcn that the skeleton vendors (MIT) in `resources/css/basecoat/animations.css`, each used by its component and each with a reduced-motion rule in the component CSS:
 
 | Keyframe | Used by |
 |---|---|

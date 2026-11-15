@@ -35,9 +35,9 @@ The fullest head in the ecosystem is arandu.io's (`resources/views/layouts/app.k
 
 `@foreach(… as x) … @endforeach` is the view language's loop (arandu.io uses it for the hreflang cluster). Every copy names every copy, itself included: a cluster that is not reciprocal is discarded whole, silently.
 
-## Boosted navigation (`hx-boost`)
+## Boosted navigation (`ypy-boost`)
 
-htmx swaps the body and updates `<title>`, but leaves the rest of `<head>` as it was: canonical, robots, OG and JSON-LD would describe the previous page. hyz.is solves it with a hidden element carrying `Metadata.JSON()` and a registered behaviour that rewrites the head on `mounted` and `updated`:
+YPY swaps the body and sets `<title>` from the response, but leaves the rest of `<head>` as it was: canonical, robots, OG and JSON-LD would describe the previous page. hyz.is solves it with a hidden element carrying `Metadata.JSON()` and a registered behaviour that rewrites the head on `mounted` and `updated`:
 
 ```html
 <div hidden data-kyse-behavior="page-metadata" data-page-metadata="{{ .MetaJSON() }}"></div>

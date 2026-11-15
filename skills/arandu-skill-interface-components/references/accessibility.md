@@ -1,4 +1,4 @@
-# Accessibility checklist (Kyse + HTMX, and Ayra)
+# Accessibility checklist (Kyse + YPY, and Ayra)
 
 Adapted for server-rendered Kyse views from the Vercel Web Interface Guidelines (MIT, see `NOTICE.md` at the repository root); React-only items removed, Kyse specifics added.
 

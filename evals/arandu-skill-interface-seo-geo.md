@@ -21,4 +21,4 @@
 |---|---|---|---|
 | 1 | "Set up discovery" | Kyse app with public pages | `geo.Config.Indexing` read from the environment; staging `curl /robots.txt` disallows all; catalogue lists only public paths |
 | 2 | "JSON-LD for pricing" | page with prices | graph restates visible prices in BRL; no AggregateRating |
-| 3 | "Boosted navigation keeps the old canonical" | hx-boost site | page-metadata behaviour present; navigating updates canonical (capture of head) |
+| 3 | "Boosted navigation keeps the old canonical" | ypy-boost site | page-metadata behaviour present; navigating updates canonical (capture of head) |
