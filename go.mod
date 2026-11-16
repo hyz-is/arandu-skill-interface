@@ -4,12 +4,12 @@ go 1.26.10
 
 require (
 	github.com/arandu-io/ayra v0.1.0
-	github.com/arandu-io/hesape v0.107.0
-	github.com/arandu-io/kyse v0.53.0
+	github.com/arandu-io/hesape v0.109.0
+	github.com/arandu-io/kyse v0.53.1
 )
 
 require (
-	github.com/arandu-io/framework v0.69.0 // indirect
+	github.com/arandu-io/framework v0.71.0 // indirect
 	github.com/arandu-io/hesape/filesystem/s3 v0.11.0 // indirect
 	github.com/go-text/typesetting v0.3.4 // indirect
 	golang.org/x/crypto v0.57.0 // indirect
